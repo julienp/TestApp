@@ -53,6 +53,7 @@
         UIView *duck = recognizer.view;
         CATransform3D transform = CATransform3DRotate(duck.layer.transform, [recognizer rotation], 0, 0, 1);
         duck.layer.transform = transform;
+        //rotation is the full rotation from the start of the gesture, but we want deltas, so set to 0 here
         recognizer.rotation = 0.0f;
     }
 }
@@ -64,6 +65,7 @@
         CGPoint translation = [recognizer translationInView:duck.superview];
         [CATransaction setDisableActions:YES];
         duck.layer.position = CGPointMake(start.x + translation.x, start.y + translation.y);
+        //translation is the full translation from the start of the gesture, but we want deltas, so set to 0 here
         [recognizer setTranslation:CGPointMake(0, 0) inView:duck.superview];
     }
 }
