@@ -10,6 +10,7 @@
 #import "InfoViewController.h"
 #import "TilingViewController.h"
 #import "MultiTouchView.h"
+#import "TableView.h"
 
 @implementation MasterViewController
 
@@ -86,7 +87,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 // Customize the appearance of table view cells.
@@ -107,6 +108,10 @@
             break;
         case 1:
             cell.textLabel.text = NSLocalizedString(@"MultiTouch", @"MultiTouch");
+            break;
+        case 2:
+            cell.textLabel.text = NSLocalizedString(@"TableView", @"TableView");
+            break;
         default:
             break;
     }
@@ -165,6 +170,9 @@
             break;
         case 1:
             detailViewController = [[MultiTouchView alloc] initWithNibName:@"MultiTouchView" bundle:nil];
+            break;            
+        case 2:
+            detailViewController = [[TableView alloc] initWithNibName:@"TableView" bundle:nil];
             break;            
         default:
             break;
