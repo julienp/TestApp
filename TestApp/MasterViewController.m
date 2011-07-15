@@ -7,8 +7,7 @@
 //
 
 #import "MasterViewController.h"
-
-#import "DetailViewController.h"
+#import "TilingViewController.h"
 
 @implementation MasterViewController
 
@@ -17,7 +16,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Master", @"Master");
+        self.title = NSLocalizedString(@"Test App", @"Test App");
     }
     return self;
 }
@@ -92,7 +91,15 @@
     }
 
     // Configure the cell.
-    cell.textLabel.text = NSLocalizedString(@"Detail", @"Detail");
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = NSLocalizedString(@"TilingScrollview", @"TilingScrollview");
+            break;
+            
+        default:
+            break;
+    }
+    
     return cell;
 }
 
@@ -139,8 +146,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-    // Pass the selected object to the new view controller.
+    UIViewController *detailViewController;
+    
+    switch (indexPath.row) {
+        case 0:
+            detailViewController = [[TilingViewController alloc] initWithNibName:@"TilingViewController" bundle:nil];
+            break;
+            
+        default:
+            break;
+    }
+
+    
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 

@@ -14,9 +14,7 @@
 		F982EC8013D0404200005941 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F982EC7F13D0404200005941 /* main.m */; };
 		F982EC8413D0404200005941 /* TestAppAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F982EC8313D0404200005941 /* TestAppAppDelegate.m */; };
 		F982EC8713D0404200005941 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F982EC8613D0404200005941 /* MasterViewController.m */; };
-		F982EC8A13D0404200005941 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F982EC8913D0404200005941 /* DetailViewController.m */; };
 		F982EC8D13D0404200005941 /* MasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F982EC8B13D0404200005941 /* MasterViewController.xib */; };
-		F982EC9013D0404200005941 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F982EC8E13D0404200005941 /* DetailViewController.xib */; };
 		F982EC9813D0404200005941 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982EC9713D0404200005941 /* SenTestingKit.framework */; };
 		F982EC9913D0404200005941 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982EC7313D0404200005941 /* UIKit.framework */; };
 		F982EC9A13D0404200005941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982EC7513D0404200005941 /* Foundation.framework */; };
@@ -24,6 +22,12 @@
 		F982ECA313D0404200005941 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F982ECA113D0404200005941 /* InfoPlist.strings */; };
 		F982ECA513D0404200005941 /* TestAppTests.h in Resources */ = {isa = PBXBuildFile; fileRef = F982ECA413D0404200005941 /* TestAppTests.h */; };
 		F982ECA713D0404200005941 /* TestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F982ECA613D0404200005941 /* TestAppTests.m */; };
+		F982ECB113D0414200005941 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F982ECB013D0414200005941 /* README.md */; };
+		F982ECBB13D0680900005941 /* TilingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F982ECB713D0680900005941 /* TilingViewController.m */; };
+		F982ECBC13D0680900005941 /* TilingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F982ECB813D0680900005941 /* TilingViewController.xib */; };
+		F982ECBD13D0680900005941 /* TileView.m in Sources */ = {isa = PBXBuildFile; fileRef = F982ECBA13D0680900005941 /* TileView.m */; };
+		F982ECBF13D0689F00005941 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982ECBE13D0689F00005941 /* QuartzCore.framework */; };
+		F982ECC313D0699500005941 /* coffee_square.png in Resources */ = {isa = PBXBuildFile; fileRef = F982ECC213D0699500005941 /* coffee_square.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,24 +45,29 @@
 		F982EC7313D0404200005941 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F982EC7513D0404200005941 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F982EC7713D0404200005941 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F982EC7B13D0404200005941 /* TestApp-Info.plist */ = {isa = PBXFileReference; path = "TestApp-Info.plist"; sourceTree = "<group>"; };
+		F982EC7B13D0404200005941 /* TestApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestApp-Info.plist"; sourceTree = "<group>"; };
 		F982EC7D13D0404200005941 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F982EC7F13D0404200005941 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F982EC8113D0404200005941 /* TestApp-Prefix.pch */ = {isa = PBXFileReference; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
-		F982EC8213D0404200005941 /* TestAppAppDelegate.h */ = {isa = PBXFileReference; path = TestAppAppDelegate.h; sourceTree = "<group>"; };
+		F982EC8113D0404200005941 /* TestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestApp-Prefix.pch"; sourceTree = "<group>"; };
+		F982EC8213D0404200005941 /* TestAppAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAppAppDelegate.h; sourceTree = "<group>"; };
 		F982EC8313D0404200005941 /* TestAppAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppAppDelegate.m; sourceTree = "<group>"; };
-		F982EC8513D0404200005941 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		F982EC8513D0404200005941 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		F982EC8613D0404200005941 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		F982EC8813D0404200005941 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
-		F982EC8913D0404200005941 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		F982EC8C13D0404200005941 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MasterViewController.xib; sourceTree = "<group>"; };
-		F982EC8F13D0404200005941 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DetailViewController.xib; sourceTree = "<group>"; };
 		F982EC9613D0404200005941 /* TestAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F982EC9713D0404200005941 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		F982ECA013D0404200005941 /* TestAppTests-Info.plist */ = {isa = PBXFileReference; path = "TestAppTests-Info.plist"; sourceTree = "<group>"; };
+		F982ECA013D0404200005941 /* TestAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestAppTests-Info.plist"; sourceTree = "<group>"; };
 		F982ECA213D0404200005941 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F982ECA413D0404200005941 /* TestAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAppTests.h; sourceTree = "<group>"; };
 		F982ECA613D0404200005941 /* TestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestAppTests.m; sourceTree = "<group>"; };
+		F982ECB013D0414200005941 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F982ECB613D0680900005941 /* TilingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilingViewController.h; sourceTree = "<group>"; };
+		F982ECB713D0680900005941 /* TilingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilingViewController.m; sourceTree = "<group>"; };
+		F982ECB813D0680900005941 /* TilingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TilingViewController.xib; sourceTree = "<group>"; };
+		F982ECB913D0680900005941 /* TileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileView.h; sourceTree = "<group>"; };
+		F982ECBA13D0680900005941 /* TileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileView.m; sourceTree = "<group>"; };
+		F982ECBE13D0689F00005941 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F982ECC213D0699500005941 /* coffee_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee_square.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F982ECBF13D0689F00005941 /* QuartzCore.framework in Frameworks */,
 				F982EC7413D0404200005941 /* UIKit.framework in Frameworks */,
 				F982EC7613D0404200005941 /* Foundation.framework in Frameworks */,
 				F982EC7813D0404200005941 /* CoreGraphics.framework in Frameworks */,
@@ -108,6 +118,7 @@
 		F982EC7213D0404200005941 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F982ECBE13D0689F00005941 /* QuartzCore.framework */,
 				F982EC7313D0404200005941 /* UIKit.framework */,
 				F982EC7513D0404200005941 /* Foundation.framework */,
 				F982EC7713D0404200005941 /* CoreGraphics.framework */,
@@ -119,14 +130,12 @@
 		F982EC7913D0404200005941 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F982ECC413D06A8800005941 /* TilingScrollView */,
 				F982EC8213D0404200005941 /* TestAppAppDelegate.h */,
 				F982EC8313D0404200005941 /* TestAppAppDelegate.m */,
 				F982EC8513D0404200005941 /* MasterViewController.h */,
 				F982EC8613D0404200005941 /* MasterViewController.m */,
-				F982EC8813D0404200005941 /* DetailViewController.h */,
-				F982EC8913D0404200005941 /* DetailViewController.m */,
 				F982EC8B13D0404200005941 /* MasterViewController.xib */,
-				F982EC8E13D0404200005941 /* DetailViewController.xib */,
 				F982EC7A13D0404200005941 /* Supporting Files */,
 			);
 			path = TestApp;
@@ -135,6 +144,8 @@
 		F982EC7A13D0404200005941 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F982ECC213D0699500005941 /* coffee_square.png */,
+				F982ECB013D0414200005941 /* README.md */,
 				F982EC7B13D0404200005941 /* TestApp-Info.plist */,
 				F982EC7C13D0404200005941 /* InfoPlist.strings */,
 				F982EC7F13D0404200005941 /* main.m */,
@@ -160,6 +171,18 @@
 				F982ECA113D0404200005941 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F982ECC413D06A8800005941 /* TilingScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				F982ECB613D0680900005941 /* TilingViewController.h */,
+				F982ECB713D0680900005941 /* TilingViewController.m */,
+				F982ECB813D0680900005941 /* TilingViewController.xib */,
+				F982ECB913D0680900005941 /* TileView.h */,
+				F982ECBA13D0680900005941 /* TileView.m */,
+			);
+			name = TilingScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +254,9 @@
 			files = (
 				F982EC7E13D0404200005941 /* InfoPlist.strings in Resources */,
 				F982EC8D13D0404200005941 /* MasterViewController.xib in Resources */,
-				F982EC9013D0404200005941 /* DetailViewController.xib in Resources */,
+				F982ECB113D0414200005941 /* README.md in Resources */,
+				F982ECBC13D0680900005941 /* TilingViewController.xib in Resources */,
+				F982ECC313D0699500005941 /* coffee_square.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +295,8 @@
 				F982EC8013D0404200005941 /* main.m in Sources */,
 				F982EC8413D0404200005941 /* TestAppAppDelegate.m in Sources */,
 				F982EC8713D0404200005941 /* MasterViewController.m in Sources */,
-				F982EC8A13D0404200005941 /* DetailViewController.m in Sources */,
+				F982ECBB13D0680900005941 /* TilingViewController.m in Sources */,
+				F982ECBD13D0680900005941 /* TileView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,14 +333,6 @@
 				F982EC8C13D0404200005941 /* en */,
 			);
 			name = MasterViewController.xib;
-			sourceTree = "<group>";
-		};
-		F982EC8E13D0404200005941 /* DetailViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F982EC8F13D0404200005941 /* en */,
-			);
-			name = DetailViewController.xib;
 			sourceTree = "<group>";
 		};
 		F982ECA113D0404200005941 /* InfoPlist.strings */ = {
