@@ -7,6 +7,8 @@
 //
 
 #import "TestAppTests.h"
+#import "TestAppAppDelegate.h"
+#import <UIKit/UIKit.h>
 
 @implementation TestAppTests
 
@@ -24,9 +26,23 @@
     [super tearDown];
 }
 
-- (void)testExample
+//- (void)testExample
+//{
+//    STFail(@"Unit tests are not implemented yet in TestAppTests");
+//}
+
+- (void)testAppDelegate
 {
-    STFail(@"Unit tests are not implemented yet in TestAppTests");
+    TestAppAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    STAssertTrue([delegate isKindOfClass:[TestAppAppDelegate class]] , @"Delegate should be a TestAppDelegate");
+}
+
+- (void)testTableViewCell
+{
+    TestAppAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    UITableViewController *tvc = [[[delegate navigationController] viewControllers] objectAtIndex:0];
+    UITableViewCell *cell = [tvc tableView:tvc.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+    STAssertTrue([cell.textLabel.text isEqualToString: @"TilingScrollview"], @"Text should be 'TilingScrollview'");
 }
 
 @end
