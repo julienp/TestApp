@@ -7,7 +7,9 @@
 //
 
 #import "MasterViewController.h"
+#import "InfoViewController.h"
 #import "TilingViewController.h"
+#import "MultiTouchView.h"
 
 @implementation MasterViewController
 
@@ -32,7 +34,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [infoButton addTarget:self action:@selector(toggleInfo) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
 }
 
 - (void)viewDidUnload
@@ -68,6 +72,12 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (void)toggleInfo {
+    InfoViewController *info = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
+    info.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:info animated:YES];
+}
+
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -76,7 +86,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 // Customize the appearance of table view cells.
@@ -95,7 +105,8 @@
         case 0:
             cell.textLabel.text = NSLocalizedString(@"TilingScrollview", @"TilingScrollview");
             break;
-            
+        case 1:
+            cell.textLabel.text = NSLocalizedString(@"MultiTouch", @"MultiTouch");
         default:
             break;
     }
@@ -152,7 +163,9 @@
         case 0:
             detailViewController = [[TilingViewController alloc] initWithNibName:@"TilingViewController" bundle:nil];
             break;
-            
+        case 1:
+            detailViewController = [[MultiTouchView alloc] initWithNibName:@"MultiTouchView" bundle:nil];
+            break;            
         default:
             break;
     }

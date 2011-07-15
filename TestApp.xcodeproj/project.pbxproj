@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91FAA8B13D06E76005FD335 /* psyduck.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAA8A13D06E76005FD335 /* psyduck.png */; };
+		F91FAA9113D06EA5005FD335 /* MultiTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = F91FAA8F13D06EA5005FD335 /* MultiTouchView.m */; };
+		F91FAA9213D06EA5005FD335 /* MultiTouchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91FAA9013D06EA5005FD335 /* MultiTouchView.xib */; };
+		F91FAA9613D0706F005FD335 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91FAA9413D0706F005FD335 /* InfoViewController.m */; };
+		F91FAA9713D0706F005FD335 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91FAA9513D0706F005FD335 /* InfoViewController.xib */; };
 		F982EC7413D0404200005941 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982EC7313D0404200005941 /* UIKit.framework */; };
 		F982EC7613D0404200005941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982EC7513D0404200005941 /* Foundation.framework */; };
 		F982EC7813D0404200005941 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982EC7713D0404200005941 /* CoreGraphics.framework */; };
@@ -41,6 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F91FAA8A13D06E76005FD335 /* psyduck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = psyduck.png; sourceTree = "<group>"; };
+		F91FAA8E13D06EA5005FD335 /* MultiTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiTouchView.h; sourceTree = "<group>"; };
+		F91FAA8F13D06EA5005FD335 /* MultiTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiTouchView.m; sourceTree = "<group>"; };
+		F91FAA9013D06EA5005FD335 /* MultiTouchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiTouchView.xib; sourceTree = "<group>"; };
+		F91FAA9313D0706F005FD335 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		F91FAA9413D0706F005FD335 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		F91FAA9513D0706F005FD335 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		F982EC6F13D0404200005941 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F982EC7313D0404200005941 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F982EC7513D0404200005941 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +108,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F91FAA8D13D06E7F005FD335 /* MultiTouch */ = {
+			isa = PBXGroup;
+			children = (
+				F91FAA8E13D06EA5005FD335 /* MultiTouchView.h */,
+				F91FAA8F13D06EA5005FD335 /* MultiTouchView.m */,
+				F91FAA9013D06EA5005FD335 /* MultiTouchView.xib */,
+			);
+			name = MultiTouch;
+			sourceTree = "<group>";
+		};
 		F982EC6413D0404200005941 = {
 			isa = PBXGroup;
 			children = (
@@ -130,12 +152,16 @@
 		F982EC7913D0404200005941 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F91FAA8D13D06E7F005FD335 /* MultiTouch */,
 				F982ECC413D06A8800005941 /* TilingScrollView */,
 				F982EC8213D0404200005941 /* TestAppAppDelegate.h */,
 				F982EC8313D0404200005941 /* TestAppAppDelegate.m */,
 				F982EC8513D0404200005941 /* MasterViewController.h */,
 				F982EC8613D0404200005941 /* MasterViewController.m */,
 				F982EC8B13D0404200005941 /* MasterViewController.xib */,
+				F91FAA9313D0706F005FD335 /* InfoViewController.h */,
+				F91FAA9413D0706F005FD335 /* InfoViewController.m */,
+				F91FAA9513D0706F005FD335 /* InfoViewController.xib */,
 				F982EC7A13D0404200005941 /* Supporting Files */,
 			);
 			path = TestApp;
@@ -144,6 +170,7 @@
 		F982EC7A13D0404200005941 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F91FAA8A13D06E76005FD335 /* psyduck.png */,
 				F982ECC213D0699500005941 /* coffee_square.png */,
 				F982ECB013D0414200005941 /* README.md */,
 				F982EC7B13D0404200005941 /* TestApp-Info.plist */,
@@ -257,6 +284,9 @@
 				F982ECB113D0414200005941 /* README.md in Resources */,
 				F982ECBC13D0680900005941 /* TilingViewController.xib in Resources */,
 				F982ECC313D0699500005941 /* coffee_square.png in Resources */,
+				F91FAA8B13D06E76005FD335 /* psyduck.png in Resources */,
+				F91FAA9213D06EA5005FD335 /* MultiTouchView.xib in Resources */,
+				F91FAA9713D0706F005FD335 /* InfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +327,8 @@
 				F982EC8713D0404200005941 /* MasterViewController.m in Sources */,
 				F982ECBB13D0680900005941 /* TilingViewController.m in Sources */,
 				F982ECBD13D0680900005941 /* TileView.m in Sources */,
+				F91FAA9113D06EA5005FD335 /* MultiTouchView.m in Sources */,
+				F91FAA9613D0706F005FD335 /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +498,7 @@
 				F982ECAC13D0404200005941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F982ECAD13D0404200005941 /* Build configuration list for PBXNativeTarget "TestAppTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +507,7 @@
 				F982ECAF13D0404200005941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
