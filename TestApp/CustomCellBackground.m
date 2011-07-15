@@ -2,8 +2,8 @@
 //  CustomCellBackground.m
 //  TableView
 //
-//  Created by Julien Poissonnier on 7/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2010 Ray Wenderlich. All rights reserved.
+//  http://www.raywenderlich.com/2033/core-graphics-101-lines-rectangles-and-gradients
 //
 
 #import "CustomCellBackground.h"
