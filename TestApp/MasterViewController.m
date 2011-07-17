@@ -11,6 +11,7 @@
 #import "TilingViewController.h"
 #import "MultiTouchView.h"
 #import "TableView.h"
+#import "CoreGraphicsExample.h"
 
 @implementation MasterViewController
 
@@ -87,7 +88,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 // Customize the appearance of table view cells.
@@ -111,6 +112,9 @@
             break;
         case 2:
             cell.textLabel.text = NSLocalizedString(@"TableView", @"TableView");
+            break;
+        case 3:
+            cell.textLabel.text = NSLocalizedString(@"CoreGraphics", @"CoreGraphics");
             break;
         default:
             break;
@@ -173,6 +177,9 @@
             break;            
         case 2:
             detailViewController = [[TableView alloc] initWithNibName:@"TableView" bundle:nil];
+            break;            
+        case 3:
+            detailViewController = [[CoreGraphicsExample alloc] init];
             break;            
         default:
             break;

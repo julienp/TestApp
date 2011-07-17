@@ -34,6 +34,8 @@
 		F982ECBF13D0689F00005941 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982ECBE13D0689F00005941 /* QuartzCore.framework */; };
 		F982ECC313D0699500005941 /* coffee_square.png in Resources */ = {isa = PBXBuildFile; fileRef = F982ECC213D0699500005941 /* coffee_square.png */; };
 		F9BEC16D13D07CA400FB38FE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9BEC16C13D07CA400FB38FE /* LICENSE.txt */; };
+		F9BEDED613D30621002D2A28 /* CoreGraphicsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BEDED513D30621002D2A28 /* CoreGraphicsExample.m */; };
+		F9BEDEDD13D30706002D2A28 /* CoreGraphicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BEDEDC13D30706002D2A28 /* CoreGraphicsView.m */; };
 		F9DD2C9713D0793C0099EB49 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DD2C9513D0793C0099EB49 /* TableView.m */; };
 		F9DD2C9813D0793C0099EB49 /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DD2C9613D0793C0099EB49 /* TableView.xib */; };
 		F9DD2C9B13D079490099EB49 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DD2C9A13D079490099EB49 /* Common.m */; };
@@ -87,6 +89,10 @@
 		F982ECBE13D0689F00005941 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F982ECC213D0699500005941 /* coffee_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee_square.png; sourceTree = "<group>"; };
 		F9BEC16C13D07CA400FB38FE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F9BEDED413D30621002D2A28 /* CoreGraphicsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsExample.h; sourceTree = "<group>"; };
+		F9BEDED513D30621002D2A28 /* CoreGraphicsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicsExample.m; sourceTree = "<group>"; };
+		F9BEDEDB13D30706002D2A28 /* CoreGraphicsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsView.h; sourceTree = "<group>"; };
+		F9BEDEDC13D30706002D2A28 /* CoreGraphicsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicsView.m; sourceTree = "<group>"; };
 		F9DD2C9413D0793C0099EB49 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
 		F9DD2C9513D0793C0099EB49 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
 		F9DD2C9613D0793C0099EB49 /* TableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableView.xib; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 		F982EC7913D0404200005941 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F9BEDECE13D305F2002D2A28 /* CoreGraphics */,
 				F9DD2C9213D078F20099EB49 /* TableView */,
 				F91FAA8D13D06E7F005FD335 /* MultiTouch */,
 				F982ECC413D06A8800005941 /* TilingScrollView */,
@@ -228,6 +235,17 @@
 				F982ECBA13D0680900005941 /* TileView.m */,
 			);
 			name = TilingScrollView;
+			sourceTree = "<group>";
+		};
+		F9BEDECE13D305F2002D2A28 /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				F9BEDED413D30621002D2A28 /* CoreGraphicsExample.h */,
+				F9BEDED513D30621002D2A28 /* CoreGraphicsExample.m */,
+				F9BEDEDB13D30706002D2A28 /* CoreGraphicsView.h */,
+				F9BEDEDC13D30706002D2A28 /* CoreGraphicsView.m */,
+			);
+			name = CoreGraphics;
 			sourceTree = "<group>";
 		};
 		F9DD2C9213D078F20099EB49 /* TableView */ = {
@@ -367,6 +385,8 @@
 				F9DD2C9713D0793C0099EB49 /* TableView.m in Sources */,
 				F9DD2C9B13D079490099EB49 /* Common.m in Sources */,
 				F9DD2C9E13D07A7A0099EB49 /* CustomCellBackground.m in Sources */,
+				F9BEDED613D30621002D2A28 /* CoreGraphicsExample.m in Sources */,
+				F9BEDEDD13D30706002D2A28 /* CoreGraphicsView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
