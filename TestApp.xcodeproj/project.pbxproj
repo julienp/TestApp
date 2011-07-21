@@ -36,6 +36,7 @@
 		F9BEC16D13D07CA400FB38FE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9BEC16C13D07CA400FB38FE /* LICENSE.txt */; };
 		F9BEDED613D30621002D2A28 /* CoreGraphicsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BEDED513D30621002D2A28 /* CoreGraphicsExample.m */; };
 		F9BEDEDD13D30706002D2A28 /* CoreGraphicsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BEDEDC13D30706002D2A28 /* CoreGraphicsView.m */; };
+		F9C8588313D860B60001623E /* LazyTable.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C8588213D860B60001623E /* LazyTable.m */; };
 		F9DD2C9713D0793C0099EB49 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DD2C9513D0793C0099EB49 /* TableView.m */; };
 		F9DD2C9813D0793C0099EB49 /* TableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9DD2C9613D0793C0099EB49 /* TableView.xib */; };
 		F9DD2C9B13D079490099EB49 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DD2C9A13D079490099EB49 /* Common.m */; };
@@ -93,6 +94,8 @@
 		F9BEDED513D30621002D2A28 /* CoreGraphicsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicsExample.m; sourceTree = "<group>"; };
 		F9BEDEDB13D30706002D2A28 /* CoreGraphicsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsView.h; sourceTree = "<group>"; };
 		F9BEDEDC13D30706002D2A28 /* CoreGraphicsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreGraphicsView.m; sourceTree = "<group>"; };
+		F9C8588113D860B60001623E /* LazyTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyTable.h; sourceTree = "<group>"; };
+		F9C8588213D860B60001623E /* LazyTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyTable.m; sourceTree = "<group>"; };
 		F9DD2C9413D0793C0099EB49 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableView.h; sourceTree = "<group>"; };
 		F9DD2C9513D0793C0099EB49 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableView.m; sourceTree = "<group>"; };
 		F9DD2C9613D0793C0099EB49 /* TableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableView.xib; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 		F982EC7913D0404200005941 /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				F9C8587F13D860990001623E /* LazyTable */,
 				F9BEDECE13D305F2002D2A28 /* CoreGraphics */,
 				F9DD2C9213D078F20099EB49 /* TableView */,
 				F91FAA8D13D06E7F005FD335 /* MultiTouch */,
@@ -246,6 +250,15 @@
 				F9BEDEDC13D30706002D2A28 /* CoreGraphicsView.m */,
 			);
 			name = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		F9C8587F13D860990001623E /* LazyTable */ = {
+			isa = PBXGroup;
+			children = (
+				F9C8588113D860B60001623E /* LazyTable.h */,
+				F9C8588213D860B60001623E /* LazyTable.m */,
+			);
+			name = LazyTable;
 			sourceTree = "<group>";
 		};
 		F9DD2C9213D078F20099EB49 /* TableView */ = {
@@ -387,6 +400,7 @@
 				F9DD2C9E13D07A7A0099EB49 /* CustomCellBackground.m in Sources */,
 				F9BEDED613D30621002D2A28 /* CoreGraphicsExample.m in Sources */,
 				F9BEDEDD13D30706002D2A28 /* CoreGraphicsView.m in Sources */,
+				F9C8588313D860B60001623E /* LazyTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
