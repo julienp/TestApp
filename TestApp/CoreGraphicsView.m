@@ -35,6 +35,13 @@
     return _gradient;
 }
 
+- (void)dealloc
+{
+    if (NULL != _gradient) {
+        CGGradientRelease(_gradient);
+    }
+}
+
 - (void)fillCircleCenteredAt:(CGPoint)center
 {
     UIBezierPath *path = [UIBezierPath bezierPath];
