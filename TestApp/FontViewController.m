@@ -7,6 +7,7 @@
 //
 
 #import "FontViewController.h"
+#import "FontPreviewViewController.h"
 
 @interface FontViewController ()
 @property (nonatomic, strong) NSDictionary *fontInfo; // fontFamily -> fontNames
@@ -201,13 +202,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    NSString *key = [self.fontFamilies objectAtIndex:indexPath.section];
+    NSArray *fontNames = [self.fontInfo objectForKey:key];
+    NSString *fontName = [fontNames objectAtIndex:indexPath.row];
+    FontPreviewViewController *detailViewController = [[FontPreviewViewController alloc] init];
+    detailViewController.text = @"The quick brown fox jumps over the lazy dog.";
+    detailViewController.fontName = fontName;
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 @end
