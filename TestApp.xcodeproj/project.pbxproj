@@ -12,6 +12,9 @@
 		F91FAA9213D06EA5005FD335 /* MultiTouchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91FAA9013D06EA5005FD335 /* MultiTouchView.xib */; };
 		F91FAA9613D0706F005FD335 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91FAA9413D0706F005FD335 /* InfoViewController.m */; };
 		F91FAA9713D0706F005FD335 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91FAA9513D0706F005FD335 /* InfoViewController.xib */; };
+		F9423B0E152DDE8800BA963D /* EventKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9423B0D152DDE8800BA963D /* EventKitViewController.m */; };
+		F9423B11152DDF2000BA963D /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9423B0F152DDF2000BA963D /* EventKit.framework */; };
+		F9423B12152DDF2000BA963D /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9423B10152DDF2000BA963D /* EventKitUI.framework */; };
 		F982EC7413D0404200005941 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982EC7313D0404200005941 /* UIKit.framework */; };
 		F982EC7613D0404200005941 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982EC7513D0404200005941 /* Foundation.framework */; };
 		F982EC7813D0404200005941 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F982EC7713D0404200005941 /* CoreGraphics.framework */; };
@@ -66,6 +69,10 @@
 		F91FAA9313D0706F005FD335 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
 		F91FAA9413D0706F005FD335 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
 		F91FAA9513D0706F005FD335 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		F9423B0C152DDE8800BA963D /* EventKitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventKitViewController.h; sourceTree = "<group>"; };
+		F9423B0D152DDE8800BA963D /* EventKitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventKitViewController.m; sourceTree = "<group>"; };
+		F9423B0F152DDF2000BA963D /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		F9423B10152DDF2000BA963D /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		F982EC6F13D0404200005941 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F982EC7313D0404200005941 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F982EC7513D0404200005941 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9423B11152DDF2000BA963D /* EventKit.framework in Frameworks */,
+				F9423B12152DDF2000BA963D /* EventKitUI.framework in Frameworks */,
 				F982ECBF13D0689F00005941 /* QuartzCore.framework in Frameworks */,
 				F982EC7413D0404200005941 /* UIKit.framework in Frameworks */,
 				F982EC7613D0404200005941 /* Foundation.framework in Frameworks */,
@@ -152,6 +161,15 @@
 			name = MultiTouch;
 			sourceTree = "<group>";
 		};
+		F9423B0B152DDE5000BA963D /* EventKitView */ = {
+			isa = PBXGroup;
+			children = (
+				F9423B0C152DDE8800BA963D /* EventKitViewController.h */,
+				F9423B0D152DDE8800BA963D /* EventKitViewController.m */,
+			);
+			name = EventKitView;
+			sourceTree = "<group>";
+		};
 		F982EC6413D0404200005941 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +192,8 @@
 		F982EC7213D0404200005941 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9423B0F152DDF2000BA963D /* EventKit.framework */,
+				F9423B10152DDF2000BA963D /* EventKitUI.framework */,
 				F982ECBE13D0689F00005941 /* QuartzCore.framework */,
 				F982EC7313D0404200005941 /* UIKit.framework */,
 				F982EC7513D0404200005941 /* Foundation.framework */,
@@ -192,6 +212,7 @@
 				F9DD2C9213D078F20099EB49 /* TableView */,
 				F91FAA8D13D06E7F005FD335 /* MultiTouch */,
 				F982ECC413D06A8800005941 /* TilingScrollView */,
+				F9423B0B152DDE5000BA963D /* EventKitView */,
 				F982EC8213D0404200005941 /* TestAppAppDelegate.h */,
 				F982EC8313D0404200005941 /* TestAppAppDelegate.m */,
 				F982EC8513D0404200005941 /* MasterViewController.h */,
@@ -344,7 +365,7 @@
 		F982EC6613D0404200005941 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = F982EC6913D0404200005941 /* Build configuration list for PBXProject "TestApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -432,6 +453,7 @@
 				F9C8588313D860B60001623E /* LazyTable.m in Sources */,
 				F98C6030149FBEC3009FD564 /* FontViewController.m in Sources */,
 				F98C603C14A09FF7009FD564 /* FontPreviewViewController.m in Sources */,
+				F9423B0E152DDE8800BA963D /* EventKitViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

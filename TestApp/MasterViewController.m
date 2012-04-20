@@ -14,6 +14,7 @@
 #import "CoreGraphicsExample.h"
 #import "LazyTable.h"
 #import "FontViewController.h"
+#import "EventKitViewController.h"
 
 @implementation MasterViewController
 
@@ -90,7 +91,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 7;
 }
 
 // Customize the appearance of table view cells.
@@ -124,6 +125,8 @@
         case 5:
             cell.textLabel.text = NSLocalizedString(@"Fonts", @"Fonts");
             break;
+        case 6:
+            cell.textLabel.text = NSLocalizedString(@"EventKit", @"EventKit");
         default:
             break;
     }
@@ -195,6 +198,8 @@
         case 5:
             detailViewController = [[FontViewController alloc] init];
             break;
+        case 6:
+            detailViewController = [[EventKitViewController alloc] init];
         default:
             break;
     }

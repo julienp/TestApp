@@ -9,3 +9,4 @@ Instead of having scattered throw-away projects all over the place with various 
 * CoreGraphics: CG doodles as I follow along WWDC 2011 Session 129
 * LazyTable: table view that lazily loads images using NSURLConnection sendAsynchronousRequest:queue:completionHandler
 * Fonts: list of all available fonts
+* EventKit: lists all events -1 day until +1 day from now
