@@ -23,15 +23,10 @@
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGColorRef whiteColor = [UIColor colorWithRed:1.0 green:1.0 
-                                             blue:1.0 alpha:1.0].CGColor; 
-    CGColorRef lightGrayColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 
-                                                 blue:230.0/255.0 alpha:1.0].CGColor;
-    
+    UIColor *whiteColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+    UIColor *lightGrayColor = [UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0];
     CGRect paperRect = self.bounds;
-    
-    drawLinearGradient(context, paperRect, whiteColor, lightGrayColor);
+    drawLinearGradient(context, paperRect, whiteColor.CGColor, lightGrayColor.CGColor);
 }
 
 @end
