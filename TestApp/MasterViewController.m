@@ -15,6 +15,7 @@
 #import "LazyTable.h"
 #import "FontViewController.h"
 #import "EventKitViewController.h"
+#import "PullToRefresh.h"
 
 @implementation MasterViewController
 
@@ -91,7 +92,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 7;
+    return 8;
 }
 
 // Customize the appearance of table view cells.
@@ -127,6 +128,10 @@
             break;
         case 6:
             cell.textLabel.text = NSLocalizedString(@"EventKit", @"EventKit");
+            break;
+        case 7:
+            cell.textLabel.text = NSLocalizedString(@"PullToRefresh", @"PullToRefresh");
+            break;
         default:
             break;
     }
@@ -200,6 +205,10 @@
             break;
         case 6:
             detailViewController = [[EventKitViewController alloc] init];
+            break;
+        case 7:
+            detailViewController = [[PullToRefresh alloc] init];
+            break;
         default:
             break;
     }
