@@ -26,9 +26,11 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.originalRect = CGRectZero;
         self.showingSwipeView = NO;
         UINib *contentNib = [UINib nibWithNibName:@"SwipeCellContentView" bundle:nil];
         self.contentView = [[contentNib instantiateWithOwner:self options:nil] objectAtIndex:0];
+        [self.contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"brillant.png"]]];
         UINib *swipeNib = [UINib nibWithNibName:@"SwipeCellSwipeView" bundle:nil];
         self.swipeView = [[swipeNib instantiateWithOwner:self options:nil] objectAtIndex:0];
         [self.swipeView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"carbon_fibre_v2.png"]]];
@@ -49,6 +51,19 @@
 {
     if (self.showingSwipeView) {
         [self.contentView setHidden:NO];
+        CGRect rect = self.contentView.frame;
+        //move the contentView to the proper side before it's moved in
+        if (direction == UISwipeGestureRecognizerDirectionRight) {
+            if (rect.origin.x > 0) {
+                rect.origin.x = -rect.origin.x;
+                self.contentView.frame = rect;
+            }
+        } else {
+            if (rect.origin.x < 0) {
+                rect.origin.x = -rect.origin.x;
+                self.contentView.frame = rect;
+            }
+        }
         [UIView animateWithDuration:0.5 animations:^{
             self.contentView.frame = self.originalRect;
         } completion:^(BOOL finished) {
