@@ -28,9 +28,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(cellWasSwiped:)];
-    [recognizer setDirection:UISwipeGestureRecognizerDirectionLeft|UISwipeGestureRecognizerDirectionRight];
-    [self.tableView addGestureRecognizer:recognizer];
+    UISwipeGestureRecognizer *leftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(cellWasSwiped:)];
+    [leftRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.tableView addGestureRecognizer:leftRecognizer];
+    UISwipeGestureRecognizer *rightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(cellWasSwiped:)];
+    [rightRecognizer setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.tableView addGestureRecognizer:rightRecognizer];
     [self.tableView setRowHeight:55];
 }
 
@@ -39,7 +42,7 @@
     CGPoint location = [recognizer locationInView:self.tableView];
     NSIndexPath* indexPath = [self.tableView indexPathForRowAtPoint:location];
     SwipeCell* cell = (SwipeCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-    [cell toggleSwipeView];
+    [cell swipe:recognizer.direction];
 }
 
 - (void)viewDidUnload

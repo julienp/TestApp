@@ -45,7 +45,7 @@
     NSLog(@"beep!");
 }
 
-- (void)toggleSwipeView
+- (void)swipe:(UISwipeGestureRecognizerDirection)direction
 {
     if (self.showingSwipeView) {
         [self.contentView setHidden:NO];
@@ -61,7 +61,11 @@
         self.originalRect = rect;
         [self.swipeView setHidden:NO];
         [UIView animateWithDuration:0.5 animations:^{
-            self.contentView.frame = CGRectMake(rect.size.width, rect.origin.y, rect.size.width, rect.size.height);
+            if (direction == UISwipeGestureRecognizerDirectionRight) {
+                self.contentView.frame = CGRectMake(rect.size.width, rect.origin.y, rect.size.width, rect.size.height);
+            } else {
+                self.contentView.frame = CGRectMake(-rect.size.width, rect.origin.y, rect.size.width, rect.size.height);
+            }
         } completion:^(BOOL finished) {
             [self.contentView setHidden:YES];
         }];

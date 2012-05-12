@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SwipeCell : UITableViewCell
-- (void)toggleSwipeView;
+- (void)swipe:(UISwipeGestureRecognizerDirection)direction;
 - (IBAction)beep:(id)sender;
 @end
