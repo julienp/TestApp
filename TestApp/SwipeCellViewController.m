@@ -28,6 +28,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"SwipeCell";
     UISwipeGestureRecognizer *leftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(cellWasSwiped:)];
     [leftRecognizer setDirection:UISwipeGestureRecognizerDirectionLeft];
     [self.tableView addGestureRecognizer:leftRecognizer];
