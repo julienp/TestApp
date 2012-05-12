@@ -16,6 +16,7 @@
 #import "FontViewController.h"
 #import "EventKitViewController.h"
 #import "PullToRefresh.h"
+#import "SwipeCellViewController.h"
 
 @implementation MasterViewController
 
@@ -92,7 +93,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return 9;
 }
 
 // Customize the appearance of table view cells.
@@ -131,6 +132,9 @@
             break;
         case 7:
             cell.textLabel.text = NSLocalizedString(@"PullToRefresh", @"PullToRefresh");
+            break;
+        case 8:
+            cell.textLabel.text = NSLocalizedString(@"SwipeCell", @"SwipeCell");
             break;
         default:
             break;
@@ -208,6 +212,9 @@
             break;
         case 7:
             detailViewController = [[PullToRefresh alloc] init];
+            break;
+        case 8:
+            detailViewController = [[SwipeCellViewController alloc] init];
             break;
         default:
             break;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91EA444155EAF120021DF42 /* SwipeCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F91EA443155EAF120021DF42 /* SwipeCellViewController.m */; };
+		F91EA447155EB1AF0021DF42 /* SwipeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F91EA446155EB1AF0021DF42 /* SwipeCell.m */; };
 		F91FAA8B13D06E76005FD335 /* psyduck.png in Resources */ = {isa = PBXBuildFile; fileRef = F91FAA8A13D06E76005FD335 /* psyduck.png */; };
 		F91FAA9113D06EA5005FD335 /* MultiTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = F91FAA8F13D06EA5005FD335 /* MultiTouchView.m */; };
 		F91FAA9213D06EA5005FD335 /* MultiTouchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F91FAA9013D06EA5005FD335 /* MultiTouchView.xib */; };
@@ -40,6 +42,8 @@
 		F98C6031149FBEC3009FD564 /* FontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98C602F149FBEC3009FD564 /* FontViewController.xib */; };
 		F98C603C14A09FF7009FD564 /* FontPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F98C603A14A09FF7009FD564 /* FontPreviewViewController.m */; };
 		F98C603D14A09FF7009FD564 /* FontPreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98C603B14A09FF7009FD564 /* FontPreviewViewController.xib */; };
+		F98EDCAD155ED07800022D3A /* SwipeCellContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98EDCAC155ED07800022D3A /* SwipeCellContentView.xib */; };
+		F98EDCB0155ED18C00022D3A /* SwipeCellSwipeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F98EDCAF155ED18C00022D3A /* SwipeCellSwipeView.xib */; };
 		F99C32871545DDBE000BC1FF /* PullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F99C32861545DDBE000BC1FF /* PullToRefresh.m */; };
 		F9BEC16D13D07CA400FB38FE /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9BEC16C13D07CA400FB38FE /* LICENSE.txt */; };
 		F9BEDED613D30621002D2A28 /* CoreGraphicsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BEDED513D30621002D2A28 /* CoreGraphicsExample.m */; };
@@ -63,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F91EA442155EAF120021DF42 /* SwipeCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCellViewController.h; sourceTree = "<group>"; };
+		F91EA443155EAF120021DF42 /* SwipeCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeCellViewController.m; sourceTree = "<group>"; };
+		F91EA445155EB1AF0021DF42 /* SwipeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCell.h; sourceTree = "<group>"; };
+		F91EA446155EB1AF0021DF42 /* SwipeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeCell.m; sourceTree = "<group>"; };
 		F91FAA8A13D06E76005FD335 /* psyduck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = psyduck.png; sourceTree = "<group>"; };
 		F91FAA8E13D06EA5005FD335 /* MultiTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiTouchView.h; sourceTree = "<group>"; };
 		F91FAA8F13D06EA5005FD335 /* MultiTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiTouchView.m; sourceTree = "<group>"; };
@@ -107,6 +115,8 @@
 		F98C603914A09FF7009FD564 /* FontPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontPreviewViewController.h; sourceTree = "<group>"; };
 		F98C603A14A09FF7009FD564 /* FontPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontPreviewViewController.m; sourceTree = "<group>"; };
 		F98C603B14A09FF7009FD564 /* FontPreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FontPreviewViewController.xib; sourceTree = "<group>"; };
+		F98EDCAC155ED07800022D3A /* SwipeCellContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwipeCellContentView.xib; sourceTree = "<group>"; };
+		F98EDCAF155ED18C00022D3A /* SwipeCellSwipeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwipeCellSwipeView.xib; sourceTree = "<group>"; };
 		F99C32851545DDBE000BC1FF /* PullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefresh.h; sourceTree = "<group>"; };
 		F99C32861545DDBE000BC1FF /* PullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullToRefresh.m; sourceTree = "<group>"; };
 		F9BEC16C13D07CA400FB38FE /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
@@ -154,6 +164,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F91EA440155EAEEB0021DF42 /* SwipeCell */ = {
+			isa = PBXGroup;
+			children = (
+				F91EA442155EAF120021DF42 /* SwipeCellViewController.h */,
+				F91EA443155EAF120021DF42 /* SwipeCellViewController.m */,
+				F91EA445155EB1AF0021DF42 /* SwipeCell.h */,
+				F91EA446155EB1AF0021DF42 /* SwipeCell.m */,
+				F98EDCAC155ED07800022D3A /* SwipeCellContentView.xib */,
+				F98EDCAF155ED18C00022D3A /* SwipeCellSwipeView.xib */,
+			);
+			name = SwipeCell;
+			sourceTree = "<group>";
+		};
 		F91FAA8D13D06E7F005FD335 /* MultiTouch */ = {
 			isa = PBXGroup;
 			children = (
@@ -217,6 +240,7 @@
 				F982ECC413D06A8800005941 /* TilingScrollView */,
 				F9423B0B152DDE5000BA963D /* EventKitView */,
 				F99C32831545DD91000BC1FF /* PullToRefresh */,
+				F91EA440155EAEEB0021DF42 /* SwipeCell */,
 				F982EC8213D0404200005941 /* TestAppAppDelegate.h */,
 				F982EC8313D0404200005941 /* TestAppAppDelegate.m */,
 				F982EC8513D0404200005941 /* MasterViewController.h */,
@@ -416,6 +440,8 @@
 				F9BEC16D13D07CA400FB38FE /* LICENSE.txt in Resources */,
 				F98C6031149FBEC3009FD564 /* FontViewController.xib in Resources */,
 				F98C603D14A09FF7009FD564 /* FontPreviewViewController.xib in Resources */,
+				F98EDCAD155ED07800022D3A /* SwipeCellContentView.xib in Resources */,
+				F98EDCB0155ED18C00022D3A /* SwipeCellSwipeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +494,8 @@
 				F98C603C14A09FF7009FD564 /* FontPreviewViewController.m in Sources */,
 				F9423B0E152DDE8800BA963D /* EventKitViewController.m in Sources */,
 				F99C32871545DDBE000BC1FF /* PullToRefresh.m in Sources */,
+				F91EA444155EAF120021DF42 /* SwipeCellViewController.m in Sources */,
+				F91EA447155EB1AF0021DF42 /* SwipeCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

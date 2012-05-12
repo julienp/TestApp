@@ -11,3 +11,4 @@ Instead of having scattered throw-away projects all over the place with various 
 * Fonts: list of all available fonts
 * EventKit: lists all events -1 day until +1 day from now
 * PullToRefresh: UITableViewController with pull to refresh (https://github.com/leah/PullToRefresh)
+* SwipeCell: Cell that can be swiped to reveal a 2nd view behind it
