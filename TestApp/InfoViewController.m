@@ -8,8 +8,12 @@
 
 #import "InfoViewController.h"
 
+@interface InfoViewController ()
+- (IBAction)done:(id)sender;
+@property (nonatomic, strong) IBOutlet UITextView *textView;
+@end
+
 @implementation InfoViewController
-@synthesize textView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -18,14 +22,6 @@
         // Custom initialization
     }
     return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -45,7 +41,6 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 

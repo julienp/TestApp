@@ -9,25 +9,19 @@
 #import "TableView.h"
 #import "CustomCellBackground.h"
 
-@implementation TableView
+@interface TableView ()
+@property (strong, nonatomic) UITableView *tableView;
+@end
 
-@synthesize tableView;
+@implementation TableView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"TableView", @"TableView");
+        
     }
     return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -35,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"TableView", @"TableView");
+
     UIView *background = [[UIView alloc] initWithFrame:self.view.bounds];
     background.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"carbon_fibre_v2.png"]];
     [self.view addSubview:background];
@@ -95,7 +91,6 @@
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // The table view should not be re-orderable.
     return NO;
 }
 

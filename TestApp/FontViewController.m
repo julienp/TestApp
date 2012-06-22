@@ -16,16 +16,13 @@
 
 @implementation FontViewController
 
-@synthesize fontInfo = _fontInfo;
-@synthesize fontFamilies = _fontFamilies;
-
 - (void)setup
 {
     NSMutableDictionary *fontInfo = [[NSMutableDictionary alloc] init];
     NSArray *familyNames = [UIFont familyNames];
     for (NSString *familyName in familyNames) {
         NSArray *fontNames = [UIFont fontNamesForFamilyName:familyName];
-        [fontInfo setObject:fontNames forKey:familyName];
+        fontInfo[familyName] = fontNames;
     }
     self.fontInfo = fontInfo;
     NSMutableArray *fontFamilies = [[NSMutableArray alloc] init];
@@ -41,17 +38,9 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        [self setup];
+
     }
     return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -59,37 +48,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
+    [self setup];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
@@ -102,12 +65,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSString *key = [self.fontFamilies objectAtIndex:section];
-    return [[self.fontInfo objectForKey:key] count];
+    NSString *key = self.fontFamilies[section];
+    return [self.fontInfo[key] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSString *title = [self.fontFamilies objectAtIndex:section];
+    NSString *title = self.fontFamilies[section];
     return title;
 }
 
@@ -117,7 +80,7 @@
         [indexes addObject:[fontFamily substringToIndex:1]];
     }
     NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES selector:@selector(compare:)];
-    NSArray *titles = [indexes sortedArrayUsingDescriptors:[NSArray arrayWithObject:descriptor]];
+    NSArray *titles = [indexes sortedArrayUsingDescriptors:@[descriptor]];
     return titles;
 }
 
@@ -141,63 +104,22 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    // Configure the cell...
-    NSString *key = [self.fontFamilies objectAtIndex:indexPath.section];
-    NSArray *fontNames = [self.fontInfo objectForKey:key];
-    NSString *fontName = [fontNames objectAtIndex:indexPath.row];
+    NSString *key = self.fontFamilies[indexPath.section];
+    NSArray *fontNames = self.fontInfo[key];
+    NSString *fontName = fontNames[indexPath.row];
     [cell.textLabel setText:fontName];
     [cell.textLabel setFont:[UIFont fontWithName:fontName size:14]];
     
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *key = [self.fontFamilies objectAtIndex:indexPath.section];
-    NSArray *fontNames = [self.fontInfo objectForKey:key];
-    NSString *fontName = [fontNames objectAtIndex:indexPath.row];
+    NSString *key = self.fontFamilies[indexPath.section];
+    NSArray *fontNames = self.fontInfo[key];
+    NSString *fontName = fontNames[indexPath.row];
     FontPreviewViewController *detailViewController = [[FontPreviewViewController alloc] init];
     detailViewController.text = @"The quick brown fox jumps over the lazy dog.";
     detailViewController.fontName = fontName;

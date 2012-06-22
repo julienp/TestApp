@@ -40,7 +40,7 @@
 - (void)testTableViewCell
 {
     TestAppAppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    UITableViewController *tvc = [[[delegate navigationController] viewControllers] objectAtIndex:0];
+    UITableViewController *tvc = [[delegate navigationController] viewControllers][0];
     UITableViewCell *cell = [tvc tableView:tvc.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
     STAssertTrue([cell.textLabel.text isEqualToString: @"TilingScrollview"], @"Text should be 'TilingScrollview'");
 }

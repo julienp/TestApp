@@ -9,10 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FontPreviewViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UISlider *slider;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
-- (IBAction)changeFontSize:(id)sender;
-
 @property (nonatomic, strong) NSString *fontName;
 @property (nonatomic, strong) NSString *text;
 @end

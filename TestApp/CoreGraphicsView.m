@@ -8,22 +8,25 @@
 
 #import "CoreGraphicsView.h"
 
-@implementation CoreGraphicsView {
-    CGGradientRef _gradient;
-}
+@interface CoreGraphicsView ()
+@property (nonatomic) CGGradientRef gradient;
+@end
+
+@implementation CoreGraphicsView
+
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _gradient = NULL;
+
     }
     return self;
 }
 
 - (CGGradientRef)gradient
 {
-    if (NULL == _gradient) {
+    if (_gradient == nil) {
         CGFloat colors[6] = { 138.0f/255.0f, 1.0f,
                               162.0f/255.0f, 1.0f,
                               206.0f/255.0f, 1.0f};
@@ -33,13 +36,6 @@
         CGColorSpaceRelease(colorSpace);
     }
     return _gradient;
-}
-
-- (void)dealloc
-{
-    if (NULL != _gradient) {
-        CGGradientRelease(_gradient);
-    }
 }
 
 - (void)fillCircleCenteredAt:(CGPoint)center

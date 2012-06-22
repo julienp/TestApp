@@ -10,17 +10,13 @@
 #import "SwipeCell.h"
 
 @interface SwipeCell ()
-@property (nonatomic, strong) UIView *contentView;
+@property (nonatomic, strong) UIView *mainView;
 @property (nonatomic, strong) UIView *swipeView;
 @property (nonatomic, assign) CGRect originalRect;
 @property (nonatomic, assign) BOOL showingSwipeView;
 @end
 
 @implementation SwipeCell
-@synthesize contentView = __contentView;
-@synthesize swipeView = _swipeView;
-@synthesize originalRect = _originalRect;
-@synthesize showingSwipeView = _showingSwipeView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -29,15 +25,15 @@
         self.originalRect = CGRectZero;
         self.showingSwipeView = NO;
         UINib *contentNib = [UINib nibWithNibName:@"SwipeCellContentView" bundle:nil];
-        self.contentView = [[contentNib instantiateWithOwner:self options:nil] objectAtIndex:0];
-        [self.contentView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"brillant.png"]]];
+        self.mainView = [contentNib instantiateWithOwner:self options:nil][0];
+        [self.mainView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"brillant.png"]]];
         UINib *swipeNib = [UINib nibWithNibName:@"SwipeCellSwipeView" bundle:nil];
-        self.swipeView = [[swipeNib instantiateWithOwner:self options:nil] objectAtIndex:0];
+        self.swipeView = [swipeNib instantiateWithOwner:self options:nil][0];
         [self.swipeView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"carbon_fibre_v2.png"]]];
         [self.swipeView setHidden:YES];
 
-        [self addSubview:self.contentView];
-        [self insertSubview:self.swipeView belowSubview:self.contentView];
+        [self addSubview:self.mainView];
+        [self insertSubview:self.swipeView belowSubview:self.mainView];
     }
     return self;
 }
@@ -50,39 +46,39 @@
 - (void)swipe:(UISwipeGestureRecognizerDirection)direction
 {
     if (self.showingSwipeView) {
-        [self.contentView setHidden:NO];
-        CGRect rect = self.contentView.frame;
-        //move the contentView to the proper side before it's moved in
+        [self.mainView setHidden:NO];
+        CGRect rect = self.mainView.frame;
+        //move the mainView to the proper side before it's moved in
         if (direction == UISwipeGestureRecognizerDirectionRight) {
             if (rect.origin.x > 0) {
                 rect.origin.x = -rect.origin.x;
-                self.contentView.frame = rect;
+                self.mainView.frame = rect;
             }
         } else {
             if (rect.origin.x < 0) {
                 rect.origin.x = -rect.origin.x;
-                self.contentView.frame = rect;
+                self.mainView.frame = rect;
             }
         }
         [UIView animateWithDuration:0.5 animations:^{
-            self.contentView.frame = self.originalRect;
+            self.mainView.frame = self.originalRect;
         } completion:^(BOOL finished) {
             [self.swipeView setHidden:YES];
         }];
         self.showingSwipeView = NO;
     } else {
-        CGRect rect = self.contentView.frame;
+        CGRect rect = self.mainView.frame;
         self.swipeView.frame = rect;
         self.originalRect = rect;
         [self.swipeView setHidden:NO];
         [UIView animateWithDuration:0.5 animations:^{
             if (direction == UISwipeGestureRecognizerDirectionRight) {
-                self.contentView.frame = CGRectMake(rect.size.width, rect.origin.y, rect.size.width, rect.size.height);
+                self.mainView.frame = CGRectMake(rect.size.width, rect.origin.y, rect.size.width, rect.size.height);
             } else {
-                self.contentView.frame = CGRectMake(-rect.size.width, rect.origin.y, rect.size.width, rect.size.height);
+                self.mainView.frame = CGRectMake(-rect.size.width, rect.origin.y, rect.size.width, rect.size.height);
             }
         } completion:^(BOOL finished) {
-            [self.contentView setHidden:YES];
+            [self.mainView setHidden:YES];
         }];
         self.showingSwipeView = YES;
     }
@@ -104,13 +100,13 @@
     CGRect bounds = self.bounds;
     bounds.size.height -= 1;
     [self.swipeView setFrame:bounds];
-    [self.contentView setFrame:bounds];
+    [self.mainView setFrame:bounds];
 }
 
 - (void)setNeedsDisplay {
     [super setNeedsDisplay];
-    if (!self.contentView.hidden)
-        [self.contentView setNeedsDisplay];
+    if (!self.mainView.hidden)
+        [self.mainView setNeedsDisplay];
     if (!self.swipeView.hidden)
         [self.swipeView setNeedsDisplay];
 }

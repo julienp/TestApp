@@ -15,9 +15,6 @@
 @end
 
 @implementation PullToRefresh
-@synthesize header = _header;
-@synthesize label = _label;
-@synthesize isLoading = _isLoading;
 
 - (void)setupHeader
 {

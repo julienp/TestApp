@@ -10,5 +10,4 @@
 
 @interface SwipeCell : UITableViewCell
 - (void)swipe:(UISwipeGestureRecognizerDirection)direction;
-- (IBAction)beep:(id)sender;
 @end

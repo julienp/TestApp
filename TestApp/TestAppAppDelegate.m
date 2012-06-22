@@ -7,13 +7,9 @@
 //
 
 #import "TestAppAppDelegate.h"
-
 #import "MasterViewController.h"
 
 @implementation TestAppAppDelegate
-
-@synthesize window = _window;
-@synthesize navigationController = _navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

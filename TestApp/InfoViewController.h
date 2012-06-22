@@ -8,13 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InfoViewController : UIViewController {
-    UITextView *textView;
-}
-
-
-- (IBAction)done:(id)sender;
-
-@property (nonatomic, strong) IBOutlet UITextView *textView;
+@interface InfoViewController : UIViewController
 
 @end

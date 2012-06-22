@@ -12,7 +12,7 @@ void drawLinearGradient(CGContextRef context, CGRect rect, CGColorRef fromColor,
 {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGFloat locations[] = { 0.0, 1.0 };
-    NSArray *colors = [NSArray arrayWithObjects:(__bridge id)fromColor, (__bridge id)toColor, nil];
+    NSArray *colors = @[(__bridge id)fromColor, (__bridge id)toColor];
     CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)colors, locations);
     
     CGPoint startPoint = CGPointMake(CGRectGetMidX(rect), CGRectGetMinY(rect));

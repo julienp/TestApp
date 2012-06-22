@@ -10,6 +10,4 @@
 
 @interface TableView : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) UITableView *tableView;
-
 @end

@@ -15,17 +15,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"MultiTouch", @"MultiTouch");
     }
     return self;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    // Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -42,7 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.title = NSLocalizedString(@"MultiTouch", @"MultiTouch");
     [self addDuck:CGRectMake(50, 100, 100, 100)];
     [self addDuck:CGRectMake(100, 200, 150, 150)];
 
@@ -72,7 +63,6 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
